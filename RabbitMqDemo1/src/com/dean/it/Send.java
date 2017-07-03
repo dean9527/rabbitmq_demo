@@ -23,7 +23,8 @@ public class Send {
 		//指定一个队列
 		channel.queueDeclare(QUEUE_NAME, false, false, false, null);
 		//发送的消息
-		String msg = "hello world!";
+		//String msg = "hello world!";
+		String msg = "你好，rabbitmq";
 		//往队列中发出一条消息
 		channel.basicPublish("", QUEUE_NAME, null, msg.getBytes());
 		System.out.println("[x] sent '" + msg + "'");
